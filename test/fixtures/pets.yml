@@ -1,7 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  owner_id: 1
   name: MyString
+  breed: MyString
+  color: MyString
+  checked_in: false
+  checked_in_date: 2019-12-05
 
 two:
+  owner_id: 1
   name: MyString
+  breed: MyString
+  color: MyString
+  checked_in: false
+  checked_in_date: 2019-12-05
