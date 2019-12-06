@@ -5,6 +5,11 @@ module Api
             render json: {status: 'SUCESS', message: 'Loaded owners', data: owners}, status: :ok
         end
 
+        def show
+            owner = Owner.where(:id => params[:id])
+            render json: {status: 'SUCESS', message: 'Loaded owner name', data: owner}, status: :ok
+        end
+
         def create
             owner = Owner.new(owner_params)
 
