@@ -22,7 +22,7 @@ module Api
 
         def update
             pet = Pet.find_by(:id => params[:id])
-            pet.update(article_params)
+            pet.update(:checked_in => true)
             render json: {status: 'SUCESS', message: 'Pet Update', data: pet}, status: :ok
         end
             
@@ -31,5 +31,6 @@ module Api
         def article_params
             params.permit(:owner_id,:name,:breed,:color,:checked_in,:checked_in_date)
         end
+        
     end
 end
