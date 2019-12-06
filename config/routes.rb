@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   namespace 'api' do
     resources :pets
     resources :owners
+    resources :count
   end
 end
