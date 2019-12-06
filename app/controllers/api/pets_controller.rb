@@ -7,11 +7,10 @@ module Api
 
         def create
             pets = Pet.new(article_params)
-
             if pets.save
-                render json: {status: 'SUCESS', message: 'Pet added', data: pets}, status: :ok
+                render json: {status: 'SUCCESS', message: 'Pet added', data: pets}, status: :ok
             else 
-                render json: {status: 'ERROR', message: 'Pet not added',data:article.errors},status: :unprocessable_entity
+                render json: {status: 'ERROR', message: 'Pet not added',data:pets.errors},status: :unprocessable_entity
             end
         end
 
