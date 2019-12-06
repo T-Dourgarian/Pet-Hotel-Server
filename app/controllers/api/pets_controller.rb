@@ -20,6 +20,13 @@ module Api
             render json: {status: 'SUCESS', message: 'Pet Deleted', data: pet}, status: :ok
         end
 
+        def update
+            pet = Pet.find_by(:id => params[:id])
+            pet.update(article_params)
+            render json: {status: 'SUCESS', message: 'Pet Update', data: pet}, status: :ok
+        end
+            
+
         private
         def article_params
             params.permit(:owner_id,:name,:breed,:color,:checked_in,:checked_in_date)
