@@ -15,10 +15,10 @@ Things you may want to cover:
 
 * Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
 
 * ...
+
+* our routes are mostly setup in `app/controllers/api`
+
+* other places of interest are `app/models` and `app/config/routes.rb`
