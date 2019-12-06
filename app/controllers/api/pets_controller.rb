@@ -15,6 +15,12 @@ module Api
             end
         end
 
+        def destroy
+            pet = Pet.find(params[:id])
+            pet.destroy
+            render json: {status: 'SUCESS', message: 'Pet Deleted', data: pets}, status: :ok
+        end
+
         private
         def article_params
             params.permit(:owner_id,:name,:breed,:color,:checked_in,:checked_in_date)
