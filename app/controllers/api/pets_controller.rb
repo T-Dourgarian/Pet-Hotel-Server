@@ -18,7 +18,7 @@ module Api
         def destroy
             pet = Pet.find(params[:id])
             pet.destroy
-            render json: {status: 'SUCESS', message: 'Pet Deleted', data: pets}, status: :ok
+            render json: {status: 'SUCESS', message: 'Pet Deleted', data: pet}, status: :ok
         end
 
         private
